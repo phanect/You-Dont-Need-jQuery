@@ -418,6 +418,15 @@ In place of common selectors like class, id or attribute we can use `document.qu
     // accurate to decimal（when `border-box`, it's `height`; when `content-box`, it's `height + padding + border`）
     el.getBoundingClientRect().height;
     ```
+  + innerHeight
+  
+    ```js
+    // jQuery
+    $el.innerHeight();
+
+    // Native
+    el.clientHeight;
+    ```
 
 - [2.3](#2.3) <a name='2.3'></a> Position & Offset
 

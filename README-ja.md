@@ -387,12 +387,10 @@ jQueryのセレクタと比べて以下の違いがあります。
     // Native
     function getHeight(el) {
       const styles = window.getComputedStyle(el);
-      const height = el.offsetHeight;
-      const borderTopWidth = parseFloat(styles.borderTopWidth);
-      const borderBottomWidth = parseFloat(styles.borderBottomWidth);
+      const height = el.clientHeight;
       const paddingTop = parseFloat(styles.paddingTop);
       const paddingBottom = parseFloat(styles.paddingBottom);
-      return height - borderBottomWidth - borderTopWidth - paddingTop - paddingBottom;
+      return height - paddingTop - paddingBottom;
     }
     // integerで取得（`border-box`の時は`height - border`が、`content-box`の時は`height + padding`が返る）
     el.clientHeight;
